@@ -10,6 +10,7 @@ import StoryAndStats from './components/StoryAndStats';
 import PortfolioGallery from './components/PortfolioGallery';
 import ReviewsAndFeedback from './components/ReviewsAndFeedback';
 import BookingForm from './components/BookingForm';
+import heroImage from '@/assets/images/hero_nellope_portrait_1781359888281.jpg';
 
 import { SERVICES } from './data';
 import { 
@@ -188,12 +189,12 @@ export default function App() {
         {/* Left Side: Editorial portrait */}
         <div className="flex-1 flex justify-center items-center p-6 md:p-12 relative">
           <div className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden luxury-shadow bg-[#f4dcd6]/10">
-            <img
-              src="/src/assets/images/hero_nellope_portrait_1781359888281.jpg"
-              alt="Portrait of Néllope"
-              className="w-full h-full object-cover object-top hover:scale-[1.03] transition-transform duration-700 ease-out"
-              referrerPolicy="no-referrer"
-            />
+             <img
+                src={heroImage}
+                  alt="Portrait of Néllope"
+                  className="w-full h-full object-cover object-top hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  referrerPolicy="no-referrer"
+              />
             {/* Elegant vignette overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#6c5a56]/20 via-transparent to-transparent"></div>
           </div>
