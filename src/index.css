@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  --color-primary-brand: #6c5a56;
+  --color-primary-brand-light: #f4dcd6;
+  --color-secondary-brand: #645d53;
+  --color-luxury-cream: #f9f9f8;
+  --color-luxury-cream-dark: #f3f4f3;
+  --color-luxury-cream-lowest: #ffffff;
+  --color-luxury-gold: #e9c176;
+
+  /* standard shadcn mapping keys for maximum utility compatibility */
+  --color-background: #ffffff;
+  --color-foreground: #1a1c1c;
+  --color-primary: #6c5a56;
+  --color-muted: #f3f4f3;
+  --color-muted-foreground: #4f4542;
+}
+
+@layer utilities {
+  .champagne-gradient {
+    background: linear-gradient(135deg, #f5ddd7 0%, #ebe1d4 100%);
+  }
+  
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(108, 90, 86, 0.08);
+  }
+  
+  .luxury-shadow {
+    box-shadow: 0 20px 40px -10px rgba(108, 90, 86, 0.08);
+  }
+
+  .luxury-shadow-sm {
+    box-shadow: 0 8px 24px -6px rgba(108, 90, 86, 0.04);
+  }
+
+  .luxury-shadow-lg {
+    box-shadow: 0 30px 60px -15px rgba(108, 90, 86, 0.12);
+  }
+}
+
+/* Custom smooth transitions and animations */
+.hover-zoom img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-zoom:hover img {
+  transform: scale(1.04);
+}
+
+::selection {
+  background: #f4dcd6;
+  color: #6c5a56;
+}
+
+/* Smooth customized gold pulse keyframe */
+@keyframes pulse-gold {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px rgba(37, 211, 102, 0.15);
+  }
+}
+
+.animate-whatsapp {
+  animation: pulse-gold 3s infinite ease-in-out;
+}
+
+/* Elegant custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d2c3c0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6c5a56;
+}

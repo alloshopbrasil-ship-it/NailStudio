@@ -1,0 +1,6 @@
+{
+  "name": "Nellope Nails",
+  "description": "Atelier de luxo especializado em saude, naturalidade e estetica das maos. Tecnica exclusiva com durabilidade comprovada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
