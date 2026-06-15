@@ -4,6 +4,8 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
+
+  base: '/alloshopbrasil-ship-it/',
   return {
     plugins: [react(), tailwindcss()],
     resolve: {
